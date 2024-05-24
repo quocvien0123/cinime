@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="1250.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserViewController">
+   <top>
+      <AnchorPane prefHeight="18.0" prefWidth="1250.0" style="-fx-background-color: #292228; -fx-border-width: 0px 0px 1.5px 0px; -fx-border-color: #BE052B;" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <JFXButton fx:id="close" contentDisplay="CENTER" layoutX="1228.0" layoutY="5.0" onAction="#close" style="-fx-padding: 0;" styleClass="close_minus_btn" text=" " AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="5.0">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" size="20px" styleClass="close_minus_btn" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="minimize" contentDisplay="CENTER" layoutX="1213.0" layoutY="6.0" onAction="#minimize" prefWidth="16.0" style="-fx-padding: 0;" styleClass="close_minus_btn" text=" ">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="MINUS" size="20px" styleClass="close_minus_btn" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="31.0" fitWidth="36.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="40.0" layoutY="-1.0" text="Cine" textFill="RED">
+               <font>
+                  <Font name="French Script MT" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="5.0" text="Booking" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ChoiceBox layoutX="981.0" layoutY="3.0" prefWidth="150.0" style="-fx-background-color: #292228; -fx-border-width: 0px 2px; -fx-border-color: #BE052B;" />
+         </children></AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="680.0" prefWidth="199.0" style="-fx-background-color: #292228; -fx-border-width: 0px 1.5px 0px 0px; -fx-border-color: #BE052B;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="176.0" fitWidth="185.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/logo.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="1.0" layoutY="296.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="home_btn" alignment="TOP_LEFT" minHeight="-Infinity" minWidth="-Infinity" onAction="#click_home_btn" prefHeight="50.0" prefWidth="197.0" ripplerFill="WHITE" styleClass="nav_btn" text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="25.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="-2.0" size="1.5em" wrappingWidth="30.821430206298828">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontAwesomeIcon>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="film_btn" alignment="TOP_LEFT" minHeight="-Infinity" minWidth="-Infinity" onAction="#click_film_btn" prefHeight="50.0" prefWidth="197.0" ripplerFill="WHITE" styleClass="nav_btn" text="Film" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="25.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="FILM" size="1.2em" wrappingWidth="41.14285659790039">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontAwesomeIcon>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="food_btn" alignment="BOTTOM_LEFT" minHeight="-Infinity" minWidth="-Infinity" onAction="#click_food_btn" prefHeight="50.0" prefWidth="197.0" ripplerFill="WHITE" styleClass="nav_btn" text="Food &amp; Drink" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="25.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5" scaleZ="2.0">
+                           <image>
+                              <Image url="@../image/food_drink.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="support_btn" alignment="BOTTOM_LEFT" minHeight="-Infinity" minWidth="-Infinity" onAction="#click_support_btn" prefHeight="50.0" prefWidth="197.0" ripplerFill="WHITE" styleClass="nav_btn" text="Support" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="25.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/support.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="636.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleLogoutBtn" prefHeight="38.0" prefWidth="44.0" style="-fx-background-radius: 100px; -fx-padding: 0;" text=" ">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2.5em" text="" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="47.0" layoutY="644.0" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </left>
+   <center>
+      <AnchorPane style="-fx-background-color: #292228;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="homePane" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #292228;">
+               <children>
+                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="1070.0" style="-fx-background-color: #BE052B;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="457.0" layoutY="-4.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="156.0" text="Wellcome to" textFill="WHITE">
+                           <font>
+                              <Font name="Gabriola" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="407.0" layoutY="32.0" text="CINE">
+                           <font>
+                              <Font name="Agency FB Bold" size="55.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="497.0" layoutY="32.0" text="BOOKING" textFill="WHITE">
+                           <font>
+                              <Font name="Agency FB Bold" size="55.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="517.0" layoutY="108.0" textFill="WHITE" />
+                        <Label layoutX="433.0" layoutY="94.0" text="Relax - Enjoy your time!" textFill="WHITE">
+                           <font>
+                              <Font name="Cambria Italic" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <MediaView fx:id="mediaView" fitHeight="560.0" fitWidth="1070.0" preserveRatio="false" />
+                        <Group layoutX="419.0" layoutY="514.0" scaleX="0.7" scaleY="0.7">
+                           <children>
+                              <JFXRadioButton fx:id="radio1" graphicTextGap="0.0" layoutY="14.0" onAction="#onClickVideo1" prefHeight="11.0" prefWidth="32.0" text=" ">
+                                 <selectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </unSelectedColor>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="radio2" graphicTextGap="0.0" layoutX="31.0" layoutY="14.0" onAction="#onClickVideo2" prefHeight="0.0" prefWidth="28.0" text=" ">
+                                 <selectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </unSelectedColor>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="radio3" layoutX="62.0" layoutY="14.0" onAction="#onClickVideo3" prefHeight="0.0" prefWidth="28.0" text=" ">
+                                 <selectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </unSelectedColor>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="radio4" layoutX="93.0" layoutY="14.0" onAction="#onClickVideo4" text=" ">
+                                 <selectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </unSelectedColor>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="radio5" layoutX="124.0" layoutY="14.0" onAction="#onClickVideo5" text=" ">
+                                 <selectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </unSelectedColor>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="radio6" layoutX="155.0" layoutY="14.0" onAction="#onClickVideo6" text=" ">
+                                 <unSelectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </unSelectedColor>
+                                 <selectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </selectedColor>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="radio7" layoutX="186.0" layoutY="14.0" onAction="#onClickVideo7" text=" ">
+                                 <selectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </selectedColor>
+                                 <unSelectedColor>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </unSelectedColor>
+                              </JFXRadioButton>
+                           </children>
+                        </Group>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="335.0" layoutY="201.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
